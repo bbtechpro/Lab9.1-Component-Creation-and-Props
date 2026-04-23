@@ -73,3 +73,48 @@ export default defineConfig([
   },
 ])
 ```
+
+Lab Overview
+In this lab, you will create a set of reusable UI components for your company’s internal component library. You will practice creating TypeScript React components with proper prop typing, component composition, and prop handling. This lab focuses on component creation, TypeScript interfaces, prop handling, and component composition using React and TypeScript.
+
+Workplace Context
+Imagine you are a frontend developer tasked with building a component library for your company’s internal applications. Your team needs a set of reusable, type-safe components that can be easily configured for different use cases. These components will be used across multiple applications, so they need to be well-documented, properly typed, and flexible enough to handle various scenarios.
+
+This lab will help you practice building the foundational components that will be used throughout your company’s applications.
+
+Objectives
+By the end of this lab, you will:
+
+Create reusable React components with TypeScript interfaces for props.
+Implement proper prop handling and validation.
+Use component composition effectively.
+Apply TypeScript best practices for component development.
+Document components with clear prop interfaces.
+
+Activity Tasks
+Component Implementation:
+
+Implement each component according to its interface requirements.
+Use proper TypeScript types and interfaces.
+Implement prop validation where appropriate.
+Handle optional props and children correctly.
+Component Testing:
+
+Test different prop combinations.
+Verify that components render correctly with various props.
+Component Composition:
+
+Create example usage of components working together.
+Demonstrate prop passing between components.
+Show how to handle component nesting.
+Documentation:
+
+Add comments to describe component props.
+Create example usage documentation.
+Document any special prop handling or requirements.
+
+Reflection Questions
+How did you handle optional props in your components?
+What considerations did you make when designing the component interfaces?
+How did you ensure type safety across your components?
+What challenges did you face when implementing component composition?
