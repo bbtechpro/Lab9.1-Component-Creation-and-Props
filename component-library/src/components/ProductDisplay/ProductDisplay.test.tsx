@@ -9,7 +9,7 @@ describe('ProductDisplay Component', () => {
     name: 'Wireless Headphones',
     price: 199.99,
     description: 'High-quality wireless headphones with noise cancellation.',
-    imageUrl: 'https://example.com/headphones.jpg',
+    imageUrl: './src/assets/headphones.jpg',
     inStock: true
   };
 
@@ -49,7 +49,7 @@ describe('ProductDisplay Component', () => {
     render(<ProductDisplay product={mockProduct} />);
     const image = screen.getByAltText('Wireless Headphones') as HTMLImageElement;
     expect(image).toBeInTheDocument();
-    expect(image.src).toBe('https://example.com/headphones.jpg');
+    expect(image.src).toBe('./src/assets/headphones.jpg');
   });
 
   it('does not render image when imageUrl is not provided', () => {

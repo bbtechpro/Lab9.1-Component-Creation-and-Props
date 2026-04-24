@@ -1,4 +1,3 @@
-import React from 'react';
 import type { UserProfileCardProps } from '../../types';
 
 /**
@@ -12,13 +11,13 @@ import type { UserProfileCardProps } from '../../types';
  * @param onEdit - Callback function when "Edit Profile" button is clicked (optional)
  * @param children - Additional content to render within the component (optional)
  */
-export const UserProfileCard: React.FC<UserProfileCardProps> = ({
+export const UserProfileCard = ({
   user,
   showEmail,
   showRole,
   onEdit,
   children
-}) => {
+}: UserProfileCardProps) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4">
       <div className="flex items-center space-x-4">

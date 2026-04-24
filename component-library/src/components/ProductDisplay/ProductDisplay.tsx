@@ -1,4 +1,3 @@
-import React from 'react';
 import type { ProductDisplayProps } from '../../types';
 
 /**
@@ -12,13 +11,13 @@ import type { ProductDisplayProps } from '../../types';
  * @param onAddToCart - Callback function when "Add to Cart" button is clicked (optional)
  * @param children - Additional content to render within the component (optional)
  */
-export const ProductDisplay: React.FC<ProductDisplayProps> = ({
+export const ProductDisplay = ({
   product,
   showDescription,
   showStockStatus,
   onAddToCart,
   children
-}) => {
+}: ProductDisplayProps) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4">
       <div className="flex items-center space-x-4">

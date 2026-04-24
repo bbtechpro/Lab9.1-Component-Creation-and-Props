@@ -1,13 +1,11 @@
-// components/AlertBox/AlertBox.tsx
-import React from 'react';
 import type { AlertBoxProps } from '../../types/index';
- 
-export const AlertBox: React.FC<AlertBoxProps> = ({
+
+export const AlertBox = ({
   type,
   message,
   onClose,
   children
-}) => {
+}: AlertBoxProps) => {
   const alertStyles = {
     success: 'bg-green-100 border-green-500 text-green-700',
     error: 'bg-red-100 border-red-500 text-red-700',
