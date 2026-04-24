@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
+import '@testing-library/jest-dom/vitest';
+
 
 let server = {
   hmr: {
