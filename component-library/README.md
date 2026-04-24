@@ -115,13 +115,17 @@ Document any special prop handling or requirements.
 
 Reflection Questions
 How did you handle optional props in your components?
+- Handling Optional Props: Optional props were managed using TypeScript's optional property syntax (?) in interfaces, allowing components like AlertBox, ProductDisplay, and UserProfileCard to conditionally render elements (e.g., close buttons, descriptions, or edit buttons) only when the prop is provided, ensuring flexibility without breaking functionality.
+
 What considerations did you make when designing the component interfaces?
+- Designing Component Interfaces: Interfaces were designed with clear, descriptive names and included both required and optional properties, prioritizing reusability by supporting common use cases like displaying user details or product info, while keeping the API simple and intuitive for future developers integrating the components.
+
 How did you ensure type safety across your components?
+- 
+Ensuring Type Safety: Type safety was achieved through strict TypeScript interfaces that defined exact prop types, including unions for alert types and object shapes for user/product data, with verbatimModuleSyntax enforcing type-only imports to prevent runtime errors and maintain compile-time checks across all components.
+
 What challenges did you face when implementing component composition?
 
-Handling Optional Props: Optional props were managed using TypeScript's optional property syntax (?) in interfaces, allowing components like AlertBox, ProductDisplay, and UserProfileCard to conditionally render elements (e.g., close buttons, descriptions, or edit buttons) only when the prop is provided, ensuring flexibility without breaking functionality.
-Designing Component Interfaces: Interfaces were designed with clear, descriptive names and included both required and optional properties, prioritizing reusability by supporting common use cases like displaying user details or product info, while keeping the API simple and intuitive for developers integrating the components.
-Ensuring Type Safety: Type safety was achieved through strict TypeScript interfaces that defined exact prop types, including unions for alert types and object shapes for user/product data, with verbatimModuleSyntax enforcing type-only imports to prevent runtime errors and maintain compile-time checks across all components.
-Challenges in Component Composition: Component composition was challenging when handling nested children and prop passing between components, requiring careful prop drilling and ensuring that optional children rendered correctly without disrupting layout, which was resolved by using React's children prop and conditional rendering patterns.
-Testing Component Variations: To validate the solution, comprehensive unit tests were written for each component covering different prop combinations, ensuring that optional props behaved as expected and that type safety prevented invalid prop usage during development.
-Build and Configuration Fixes: The project addressed build errors by updating TypeScript configurations to exclude test files and use type-only imports, resolving red-squiggle issues and ensuring the component library compiled successfully while maintaining strict type checking.
+- Challenges in Component Composition: Component composition was challenging when handling nested children and prop passing between components, requiring careful prop drilling and ensuring that optional children rendered correctly without disrupting layout, which was resolved by using React's children prop and conditional rendering patterns.
+
+I had Github-Copilot help me with some red squiggly line TS errors, and this is the way it resolved them: "Build and Configuration Fixes: The project addressed build errors by updating TypeScript configurations to exclude test files and use type-only imports, resolving red-squiggle issues and ensuring the component library compiled successfully while maintaining strict type checking".
